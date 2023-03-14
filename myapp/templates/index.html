@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+
+
+
+
+
+{%block content%}
+
+    {%from "_macros.html" import render_field%}
+
+    <div class="container">
+
+        <h2>Hola, Bienvenido a IDGS</h2>
+        
+        <form action="/getalum">
+            <button class="btn btn-success" href="ABCompletoA.html">Alumnos</button>
+        </form>
+        <br><br>
+        <form action="">
+            <button class="btn btn-warning" >Maestros</button>
+        </form>
+    </div>
+        
+{%endblock%}
