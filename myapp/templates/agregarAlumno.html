@@ -10,8 +10,11 @@
     {%from "_macros.html" import render_field%}
 
     <div class="container">
+
+        <h2>Agregar Alumno</h2>
+
         <div class="row">
-            <form name="sent" action="/" id="form1" method="post">
+            <form name="sent" action="/insertAlum" id="form1" method="post">
                 
                 <div class="row control-group">
                     <div class="form-group col-xs-12 float-label-form-group controls">
@@ -29,7 +32,8 @@
                     </div>
                 </div>
                 <input type="hidden" name="csrf_token" value="{{csrf_token()}}"/>
-                <input type="submit" id="reg_alum" name="registrar" value="Resgistrar"/>
+                <input class="btn btn-success" type="submit" id="reg_alum" name="registrar" value="Resgistrar"/>
+                <a href="/getAlum" class="btn btn-danger"><i class="icon-action-undo icon-white"></i>Cancelar</a>
             </form>
         </div>
     </div>

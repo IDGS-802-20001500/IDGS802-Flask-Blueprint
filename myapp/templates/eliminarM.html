@@ -2,17 +2,19 @@
 
 
 
+
 {%block content%}
 
     {%from "_macros.html" import render_field%}
 
     <div class="container">
-
-        <h2>Insertar un Maestro</h2>
-
         <div class="row">
-            <form name="sent" action="/insertMaestro" id="form1" method="post">
-                
+            <form name="sent" action="/eliminarMaestro" id="form1" method="post">
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 float-label-form-group controls">
+                        {{render_field(form.id,class="form-control")}}
+                    </div>
+                </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 float-label-form-group controls">
                         {{render_field(form.nombre,class="form-control")}}
@@ -29,8 +31,8 @@
                     </div>
                 </div>
                 <input type="hidden" name="csrf_token" value="{{csrf_token()}}"/>
-                <input class="btn btn-success" type="submit" id="reg_alum" name="registrar" value="Resgistrar"/>
-                <a href="/getMaestros" class="btn btn-danger">Cancelar</a>
+                <input type="submit" class="btn btn-danger" id="eliminar" name="eliminar" value="Elimnar"/>
+                <a href="/getMaestros" class="btn btn-success">Cancelar</a>
             </form>
         </div>
     </div>

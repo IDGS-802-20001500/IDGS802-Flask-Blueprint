@@ -11,7 +11,7 @@
 
     <div class="container">
         <div class="row">
-            <a href="/" class="btn btn-warning"><i class="icon-pencil icon-white"></i>Agregar</a>
+            <a href="/insertAlum" class="btn btn-warning"><i class="icon-pencil icon-white"></i>Agregar</a>
             <h3>Alumnos IDGS</h3>
 
             <table class="table table-striped table-bordered">
@@ -31,8 +31,8 @@
                         <td>{{alum.nombre}}</td>
                         <td>{{alum.apellidos}}</td>
                         <td>{{alum.email}}</td>
-                        <td><a href="eliminar?id={{alum.id}}" class="btn btn-danger"><i class="icon-remove icon-white"></i> Eliminar</a></td>
-                        <td><a href="modificar?id={{alum.id}}" class="btn btn-warning"><i class="icon-pencil icon-white"></i> Modificar</a></td>
+                        <td><a href="eliminarAlum?id={{alum.id}}" class="btn btn-danger"><i class="icon-remove icon-white"></i> Eliminar</a></td>
+                        <td><a href="modificarAlum?id={{alum.id}}" class="btn btn-warning"><i class="icon-pencil icon-white"></i> Modificar</a></td>
                         
                     </tr>
                     {%endfor%}
