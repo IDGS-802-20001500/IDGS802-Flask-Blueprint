@@ -39,7 +39,7 @@ def index():
         except Exception as ex:
             print(ex)
             
-        return redirect(url_for("ABCompletoM"))
+        return redirect(url_for("maestros.getMaestros"))
     return render_template("agregarMaestro.html",form=create_form)
 
 @maestros.route("/modificarMaestro",methods=["GET","POST"])
@@ -94,7 +94,7 @@ def eliminar():
     create_form=forms.UserForm(request.form)
     if request.method=="GET":
         id=request.args.get("id")
-        id=request.args.get("id")
+        
         try:
             connection = get_connection()
             with connection.cursor() as cursor:
@@ -125,5 +125,5 @@ def eliminar():
         except Exception as ex:
             print(ex)
         
-        return redirect(url_for("ABCompletoM"))
+        return redirect(url_for("maestros.getMaestros"))
     return render_template("eliminarM.html",form=create_form)
